@@ -1,7 +1,7 @@
 # Weakly Supervised Learning of ResNet
 
 This implements weakly supervised learning of residual networks.
-This [Torch](http://torch.ch/) implementation is based on [fb.resnet.torch](https://github.com/facebook/fb.resnet.torch).s
+This [Torch](http://torch.ch/) implementation is based on [fb.resnet.torch](https://github.com/facebook/fb.resnet.torch).
 
 ## Download pretrained models
 
@@ -28,9 +28,9 @@ You also need to install [spatial-pooling.torch](https://github.com/durandtibo/s
 
 ## Training
 
-To train ResNet-101 with WELDON pooling, run `main.lua`
+To train ResNet-101 with WELDON pooling on VOC 2007 dataset, run `main.lua`
 ```
-th main.lua
+th main.lua -optim sgd -LR 1e-3 -netType resnet101-weldon -batchSize 40 -imageSize 224 -data /path_dataset/VOCdevkit/VOC2007/ -dataset voc2007-cls -loss MultiLabel -train multilabel -k 5 -nEpochs 20
 ```
 
 ## License
