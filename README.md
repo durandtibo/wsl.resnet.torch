@@ -40,7 +40,7 @@ th main.lua -optim sgd -LR 1e-2 -netType resnet101-weldon -batchSize 40 -imageSi
 
 To train ResNet-101 with GlobalMaxPooling on VOC 2007 dataset, run `main.lua` with
 ```
-th main.lua -optim sgd -LR 1e-2 -netType resnet101-gap -batchSize 40 -imageSize 224 -data /path_dataset/VOCdevkit/VOC2007/ -dataset voc2007-cls -loss MultiLabel -train multilabel -k 15 -nEpochs 20
+th main.lua -optim sgd -LR 1e-2 -netType resnet101-gmp -batchSize 40 -imageSize 224 -data /path_dataset/VOCdevkit/VOC2007/ -dataset voc2007-cls -loss MultiLabel -train multilabel -k 15 -nEpochs 20
 ```
 
 To train ResNet-101 with GlobalAveragePooling on VOC 2007 dataset, run `main.lua` with
